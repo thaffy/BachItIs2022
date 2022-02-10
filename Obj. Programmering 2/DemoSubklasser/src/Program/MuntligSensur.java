@@ -15,9 +15,7 @@ public class MuntligSensur extends Sensur {
 
     @Override
     public String toString() {
-        return "MuntligSensur{" +
-                "lengde=" + lengde +
-                "} " + super.toString();
+        return super.toString() + " lengde = " + lengde;
     }
 
     @Override
