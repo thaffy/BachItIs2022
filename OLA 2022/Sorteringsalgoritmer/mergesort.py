@@ -3,12 +3,15 @@ def mergesort(liste):
     if len(liste) > 1:
 
         mid = len(liste)//2
+
+        # Splitter lista i 2, fra midtpunkt. : bestemmer hvilken retning den nye lista har.
         left = liste[:mid]
         right = liste[mid:]
 
-        mergesort(left)
-        mergesort(right)
+        mergesort(left) # <- Rekursjon! Funksjonen kaller seg selv helt til listelengden er 1
+        mergesort(right) # <- ditto
 
+        # Kortform for å lage variabler med samme verdi
         i = j = k = 0
 
         while i < len(left) and j < len(right):
