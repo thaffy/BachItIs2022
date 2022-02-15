@@ -1,5 +1,6 @@
 def insertionsort(liste):
     i = 1
+    listelengde = len(liste)
     while i < listelengde:
         j = i
         while j > 0 and liste[j-1] > liste[j]:
