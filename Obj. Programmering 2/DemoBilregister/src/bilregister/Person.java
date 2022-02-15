@@ -40,6 +40,10 @@ public class Person implements Comparable<Person> {
         return biler;
     }
 
+    public void regBil(Bil bil) {
+        biler.add(bil);
+    }
+
     public int compareTo(Person person) {
         return KOLLATOR.compare(this.enavn,person.getEnavn());
     }

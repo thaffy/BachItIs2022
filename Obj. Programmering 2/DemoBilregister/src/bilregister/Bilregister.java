@@ -13,6 +13,10 @@ public class Bilregister {
     List<Bil> biler = new ArrayList<>();
     List<Postadresse> postadresser = new ArrayList<>();
 
+    String bilfil = "biler.csv";
+    String personfil = "personer.csv";
+    String postadressefil = "postadresser.csv";
+
     // Søkemetoder
     public Postadresse finnPostadresse(String postnr) {
         for(int i = 0;i < postadresser.size();i++) {
@@ -38,16 +42,37 @@ public class Bilregister {
         return null;
     }
 
-    public void skrivPostnummer(String filnavn) throws Exception {
+    public void skrivPostadresser(String filnavn) throws Exception {
         try {
             PrintWriter utPost = Filbehandling.lagSkriveForbindelse(filnavn);
             for(int i = 0;i < postadresser.size();i++) {
                 utPost.println(postadresser.get(i).toFile());
             }
+            utPost.close();
         } catch (Exception e) {throw new Exception("Kan ikke skrive til postfil!");}
     }
 
-    public void lesPostnummer(String filnavn) throws Exception {
+    public void skrivPersoner(String filnavn) throws Exception {
+        try {
+            PrintWriter utfil = Filbehandling.lagSkriveForbindelse(filnavn);
+            for(int j = 0;j < personer.size(); j++) {
+                utfil.println(personer.get(j).toFile());
+            }
+            utfil.close();
+        } catch (Exception e) {throw new Exception("Kan ikke skrive til person-fil!");}
+    }
+
+    public void skrivBiler(String filnavn) throws Exception {
+        try {
+            PrintWriter utfil = Filbehandling.lagSkriveForbindelse(filnavn);
+            for(int k = 0; k < biler.size();k++) {
+                utfil.println(biler.get(k).toFile());
+            }
+            utfil.close();
+        } catch (Exception e) {throw new Exception("Kan ikke skrive til bil-fil!");}
+    }
+
+    public void lesPostadresser(String filnavn) throws Exception {
         try {
             BufferedReader innfil = Filbehandling.lagLeseForbindelse(filnavn);
 
@@ -59,8 +84,10 @@ public class Bilregister {
                 StringTokenizer innhold = new StringTokenizer(linje,",");
                 String postnr = innhold.nextToken();
                 String poststed = innhold.nextToken();
+
                 Postadresse postadresse = new Postadresse(postnr,poststed);
                 postadresser.add(postadresse);
+
                 linje = innfil.readLine();
             }
             innfil.close();
@@ -77,15 +104,64 @@ public class Bilregister {
                 String fnavn = innhold.nextToken();
                 String gateadresse = innhold.nextToken();
                 String postnr = innhold.nextToken();
+
                 Postadresse postadresse = finnPostadresse(postnr);
+
                 Person person = new Person(enavn,fnavn,gateadresse,postadresse);
                 personer.add(person);
+
                 linje = innfil.readLine();
             }
             innfil.close();
         } catch (Exception e) {throw new Exception("Kan ikke leses fra person-fil :-( ");}
     }
 
+    public void lesBiler(String filnavn) throws Exception {
+        try {
+            BufferedReader innfil = Filbehandling.lagLeseForbindelse(filnavn);
+            String linje = innfil.readLine();
+            while(linje != null) {
+                StringTokenizer innhold = new StringTokenizer(linje,",");
+                String regnr = innhold.nextToken();
+                String merke = innhold.nextToken();
+                String modell = innhold.nextToken();
+                String enavn = innhold.nextToken();
+
+                // Finner personobjektet
+                Person eier = finnPerson(enavn);
+
+                Bil bil = new Bil(regnr,merke,modell,eier);
+                biler.add(bil);
+
+                // Legger bilen inn i eierens bil-arraylist
+                eier.regBil(bil);
+
+                linje = innfil.readLine();
+            }
+            innfil.close();
+        } catch (Exception e) {throw new Exception("Kan ikke leses fra bil-fil :-( ");}
+    }
+
+    public void lesAlleFiler() throws Exception {
+        try {
+            lesPostadresser(postadressefil);
+            lesPersoner(personfil);
+            lesBiler(bilfil);
+
+        } catch (Exception e) {throw e;}
+    }
+
+    public void skrivAlleFiler() throws Exception {
+        try {
+            skrivPostadresser(postadressefil);
+            skrivPersoner(personfil);
+            skrivBiler(bilfil);
+        } catch (Exception e) {throw e;}
+    }
 
 
+    public void regBil(String regnr, String merke, String modell, Person eier) {
+        Bil bil = new Bil(regnr,merke,modell,eier);
+        biler.add(bil);
+    }
 }
