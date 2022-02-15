@@ -1,0 +1,3 @@
+Brum,Ole,3518
+Nøff,Nasse,3502
+Esel,Tussi,3000

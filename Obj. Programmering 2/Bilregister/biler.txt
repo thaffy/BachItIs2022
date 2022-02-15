@@ -1,0 +1,3 @@
+Nøff,AB12345,Opel
+Nøff,BC23456,KIA
+Brum,CD34567,Opel

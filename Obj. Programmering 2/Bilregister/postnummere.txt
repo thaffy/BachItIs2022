@@ -1,0 +1,4 @@
+3000,Drammen
+3502,Hønefoss
+3518,Hønefoss
+4000,Stavanger
