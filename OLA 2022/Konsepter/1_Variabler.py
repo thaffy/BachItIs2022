@@ -2,7 +2,13 @@
 
 ### 0.0 - Aller først...
 
-# er tegnet for kommentar. Alt som skrives etter # vil ikke kjøre/ødelegge for programmet.
+# (hashtag) er tegnet for kommentar. Alt som skrives etter # vil ikke kjøre/ødelegge for programmet.
+
+# Vi gjør som regel èn ting per linje i python. Dette kan variere fra språk til språk, men unngå å gjøre flere ting på èn linje.
+# for eksempel så kan vi skrive print('hei'), men ikke print('hei) print('hei') - Dette fører til feil i programmet. 
+# Hvis vi vil ha flere ting utført på samme linje må vi separere med komma. F.eks: print('hei'),print('hei') - Printene blir uansett 2 linjer i konsollen. 
+# Som nybegynner er det uansett ryddigere/enklere å dele oppe flere ting som skal utføres over flere linjer :)
+
 # print() brukes for å skrive ut innhold i konsollen når du kjører programmet.
 # print() brukes på følgende måte: print(innhold) eller print('Tekst') eller print('Tekst',tall/utregning,variabel)
 

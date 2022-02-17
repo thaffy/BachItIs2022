@@ -2,6 +2,9 @@
 
 # Hvis noe er sant, gjør noe
 
+from cgi import test
+
+
 testvariabel = 5 # <- Endrer vi denne fra 5 til 6 vil if-test nr 2 oppfylles, men ikke if-test nr 1
 
 if testvariabel == 5:
@@ -27,6 +30,22 @@ if testvariabel != 6:
 # resultatet er at test nr 3 ikke stemmer og ingenting skjer
 # men resultatet i test nr 4 er sant og printer ut tekst.
 print()
+
+
+
+
+
+
+### 2.0 - If/Else ###
+
+# Hvis noe er sant, gjør noe. Hvis ikke, gjør noe annet
+
+testvariabel = 5 # <- Endre denne til noe annet enn 5 og se hva som skjer
+
+if testvariabel == 5:
+    print('Tall: 5 - If-test nr 4')
+else:
+    print('Tallet var ikke 5 - If-test nr 4')
 
 
 
