@@ -51,7 +51,8 @@ print()
 
 
 ### 4.0 - 2-Dimensjonale Lister ###
-# Det er kanskje mest naturlig å tenke på en liste horisontalt, ettersom vi skriver elementene inn i lista [1,2,3,4,5 --->], men egentlig er lister tabeller.
+
+# Det er kanskje mest naturlig visualisere en liste horisontalt, ettersom vi skriver elementene inn i lista horisontalt [1,2,3,4,5 --->], men egentlig er lister tabeller.
 # En èndimensjonal liste er da en tabell med 1 kolonno og 1 rad.
 # En todimensjonal liste blir da en tabell med 2 kolonnor og 2 rader
 
@@ -61,7 +62,7 @@ liste5 = [
     'Andre',  # [1]
     'Tredje', # [2]
     'Fjerde'  # [3]
-]                          # Merk at vi må ha komma mellom hvert element!
+]             # Merk at vi må ha komma mellom hvert element!
 
 print('Liste nr 5:',liste5)
 print()
@@ -74,7 +75,7 @@ liste7 = [
     ['Første',1,2,3,4],    # [0][0-4]
     ['Andre',5,6,7,8],     # [1][0-4]
     ['Tredje',9,10,11,12], # [2][0-4]
-]                          # Merk at vi må ha komma mellom hvert element!
+]                          # Merk at vi må ha komma mellom hvert element og sub-element!
 
 # Begge måtene å skrive det i koden gir samme resultat:
 print('Liste6:',liste6)
