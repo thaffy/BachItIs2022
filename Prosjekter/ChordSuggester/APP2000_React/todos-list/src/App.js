@@ -1,23 +1,42 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+
+// Application Meta & Content
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import Header from './MyComponents/Header'
+import Footer from './MyComponents/Footer'
+import About from './MyComponents/About'
+
+// Application Logic
+import AddTodo from './MyComponents/AddTodo'
+import Todos from './MyComponents/Todos'
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Header title="My Todo-list" searchBar={false}/>
+
+        <Switch>
+          <Route exact path ='/' render={() => {
+            return(
+              <>
+              <AddTodo/>
+              <Todos/>
+              </>
+            )
+          }}>
+          </Route>
+
+          <Route exact path='/about'>
+            <About/>
+          </Route>
+        </Switch>
+
+        <Footer/>
+      </Router>
     </div>
   );
 }
