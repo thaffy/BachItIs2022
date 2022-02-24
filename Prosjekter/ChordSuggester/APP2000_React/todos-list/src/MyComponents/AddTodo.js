@@ -20,11 +20,11 @@ const AddTodo = ({addTodo}) => {
         <form onSubmit={submit}>
         <div class="mb-3">
             <label htmlFor="title" class="form-label">Title</label>
-            <input type="text" value={title} onChange={(e)=>setTitle(e.target.value)} class="form-control" id="title" aria-describedby="emailHelp"/>
+            <input type="text" value={title} onChange={(e)=> setTitle(e.target.value)} class="form-control" id="title" aria-describedby="emailHelp"/>
         </div>
         <div class="mb-3">
             <label htmlFor="desc" class="form-label">Description</label>
-            <input type="text" value={desc} onChange={(e)=>setDesc(e.target.value)} class="form-control" id="desc"/>
+            <input type="text" value={desc} onChange={(e)=> setDesc(e.target.value)} class="form-control" id="desc"/>
         </div>
         <button type="submit" class="btn btn-primary">Add Todo</button>
         </form>
