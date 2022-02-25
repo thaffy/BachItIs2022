@@ -56,8 +56,8 @@ function App() {
           <Route exact path ='/' render={() => {
             return(
               <>
-              <AddTodo/>
-              <Todos/>
+              <AddTodo addTodo={addTodo}/>
+              <Todos todos={todos} onDelete={onDelete}/>
               </>
             )
           }}>
