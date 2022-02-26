@@ -1,3 +1,5 @@
+
+
 def bubbleSort(array):
     n = len(array)
     for i in range(n-1): 
@@ -9,4 +11,3 @@ def bubbleSort(array):
         if swapped == False:
             break
     return array
-
