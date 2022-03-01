@@ -53,10 +53,12 @@ public class Main extends Application {
 
         // Panel for å styre layout
         BorderPane root = new BorderPane();
+
         // Legger inn listeboks & knapp
         root.setCenter(liste);
         root.setBottom(knapp);
 
+        // Viser root
         Scene scene = new Scene(root, 320, 240);
         vindu.setScene(scene);
         vindu.show();
