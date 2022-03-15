@@ -1,6 +1,8 @@
+from datetime import datetime
 from typing import List, Optional
 
 from pydantic import BaseModel
+from sqlalchemy import TIMESTAMP
 
 class UserBase(BaseModel):
     email: str
@@ -10,13 +12,14 @@ class UserCreate(UserBase):
 
 class User(UserBase):
     
+    password: str
     firstName: str
     lastName: str
     alias : str
     admin: bool
-    countryID: str
+    countryID: int
     userID: int
-    timestamp: str
+    timestamp: datetime
 
     class Config:
         orm_mode = True
