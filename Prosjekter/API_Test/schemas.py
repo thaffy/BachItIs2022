@@ -9,12 +9,14 @@ class UserCreate(UserBase):
     password: str
 
 class User(UserBase):
-    userID: int
+    
     firstName: str
     lastName: str
     alias : str
     admin: bool
-    country: str
+    countryID: str
+    userID: int
+    timestamp: str
 
     class Config:
         orm_mode = True
