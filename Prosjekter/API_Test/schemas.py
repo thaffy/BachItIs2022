@@ -9,9 +9,9 @@ class UserCreate(UserBase):
     password: str
 
 class User(UserBase):
-    userID: str
-    firstname: str
-    lastname: str
+    userID: int
+    firstName: str
+    lastName: str
     alias : str
     admin: bool
     country: str

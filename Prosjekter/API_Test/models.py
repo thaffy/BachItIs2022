@@ -6,13 +6,13 @@ from database import Base
 import database
 
 class User(Base):
-    __tablename__ = "User"
+    __tablename__ = "Users"
 
-    userID = Column(String,primary_key=True,index=True)
+    userID = Column(Integer,primary_key=True,index=True)
     email = Column(String,index=True)
     password = Column(String,index=True)
-    firstname = Column(String,index=True)
-    lastname = Column(String,index=True)
+    firstName = Column(String,index=True)
+    lastName = Column(String,index=True)
     alias = Column(String,index=True)
     admin = Column(Boolean,index=True)
     country = Column(String,index=True)
