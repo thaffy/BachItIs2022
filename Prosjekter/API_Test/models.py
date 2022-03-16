@@ -18,3 +18,19 @@ class User(Base):
     countryID = Column(CHAR,index=True)
     userID = Column(Integer,primary_key=True,index=True)
     timestamp = Column(TIMESTAMP,index=True)
+
+class Topic(Base):
+    __tablename__ = "Topic"
+
+    topicID = Column(Integer,primary_key=True,index=True)
+    topicName = Column(String,index=True)
+
+class ForumPost(Base):
+    __tablename__ = "ForumPost"
+
+    forumPostID = Column(Integer,primary_key=True,index=True)
+    userID = Column(Integer,index=True)
+    text = Column(String,index=True)
+    forumPostFileID = Column(Integer,index=True)
+    timestamp = Column(TIMESTAMP,index=True)
+    
