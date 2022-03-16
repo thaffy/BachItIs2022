@@ -33,4 +33,11 @@ class ForumPost(Base):
     text = Column(String,index=True)
     forumPostFileID = Column(Integer,index=True)
     timestamp = Column(TIMESTAMP,index=True)
+
+class Project(Base):
+    __tablename__ = "Project"
+
+    projectID = Column(Integer,primary_key=True,index=True)
+    projectName = Column(String,index=True)
+    projectAdminUserID = Column(Integer,index=True)
     
