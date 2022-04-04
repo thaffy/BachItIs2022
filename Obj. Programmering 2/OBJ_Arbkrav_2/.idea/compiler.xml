@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="OAD_Arbkrav2" />
+        <module name="OBJ_Arbkrav_2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="OAD_Arbkrav2" target="17" />
+      <module name="OBJ_Arbkrav_2" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

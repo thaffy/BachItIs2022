@@ -1,4 +1,4 @@
-package com.oad2.oad_arbkrav2;
+package com.objprg2.obj_arbkrav_2;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
