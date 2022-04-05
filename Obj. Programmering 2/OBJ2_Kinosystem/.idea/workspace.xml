@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0cc28db5-6e81-4d6a-861a-835d549245fa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../OBJ_MarkusTestProsjekt/src/Kontroll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OBJ_MarkusTestProsjekt/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/libraries/Maven__org_openjfx_javafx_base_17_ea_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/libraries/Maven__org_openjfx_javafx_base_mac_17_ea_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/libraries/Maven__org_openjfx_javafx_controls_17_ea_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/libraries/Maven__org_openjfx_javafx_controls_mac_17_ea_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/libraries/Maven__org_openjfx_javafx_fxml_17_ea_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/libraries/Maven__org_openjfx_javafx_fxml_mac_17_ea_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/libraries/Maven__org_openjfx_javafx_graphics_17_ea_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/libraries/Maven__org_openjfx_javafx_graphics_mac_17_ea_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/OBJ_Arbkrav_2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/src/main/java/com/objprg2/obj_arbkrav_2/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/src/main/java/com/objprg2/obj_arbkrav_2/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBJ_Arbkrav_2/src/main/resources/com/objprg2/obj_arbkrav_2/hello-view.fxml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="27LF7GpuBmLyldnL1R4CCvfGpTd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0cc28db5-6e81-4d6a-861a-835d549245fa" name="Changes" comment="" />
+      <created>1649091292892</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649091292892</updated>
+    </task>
+    <servers />
+  </component>
+</project>
