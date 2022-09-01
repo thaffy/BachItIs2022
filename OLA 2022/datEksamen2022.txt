@@ -1,0 +1,172 @@
+Ting å kunne til eksamen:
+
+-- Opprette database
+    - Korrekt rekkefølge mtp tabellene i skriptet
+    - Korrekt rekkefølge mtp eventuell data som legges inn med CREATE skriptet
+
+Hvilke tabeller er avhenig av eksistensen til en eller flere andre tabeller?
+Hvilke tabeller er frittstående?
+-> Avhenger av fremmednøkkler.
+
+
+https://pastebin.com/hkQ6L4DJ
+
+Eksempel:
+
+Ansatt:
+    ansattID (Primær)
+    stillingskode*
+    avdelingsnr*
+    telefon
+    epost
+    
+
+Stillingstype:
+    stillingskode (Primær)
+    stillingsnavn
+
+Avdeling:
+    avdelingsnr (Primær)
+    avdelingsnavn
+    lokasjon*
+
+Poststed:
+    postnr
+    poststed
+
+
+
+
+Bilde(BildeID, Beskrivelse, OpplastetDato, Fotograf*)  
+Bruker(BrukerID, Fornavn, Etternavn, Epost)
+Likes(BildeID*, BrukerID*) 
+Kommentar(BildeID*, BrukerID*, Kommentaren) 
+Emneknagg(EmneknaggID, Emneknaggen) 
+TagForBilde(BildeID*, EmneknaggID*) 
+
+
+
+
+
+
+
+
+
+-- DBA og brukerhåndtering
+    - CREATE USER ... IDENTIFIED BY ...
+    - GRANT ... ON tabell TO brukernavn
+    - DROP USER ... (?)
+
+    - CREATE VIEW ... AS (
+        SELECT *
+        FROM ...
+    )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- Spørringer
+    - Enkle SELECTs
+    - COUNTs
+        - GROUP BY alt som som selekteres, men ikke COUNT
+        f.eks 
+            ## Teller alle kunder ##
+            SELECT COUNT(*) 
+            FROM Kunde
+
+            ## Teller antall stillingstyper per avdeling ##
+            SELECT avdelingsnavn, COUNT(stillingstype.stillingskode) AS antallStillinger
+            FROM avdeling,stillingstype
+            GROUP BY avdelingsnavn
+
+                Husk at HAVING er avhengig av at det er en GROUP BY i spørringen.
+                I eksempelet over kunne vi brukt HAVING for å bare vise avdelnger med 3 eller flere stillingstyper.
+                Men vi kunne IKKE brukt HAVING i den første spørringen, ettersom det ikke er en GROUP BY!
+
+
+
+    -- WHERE og JOIN
+
+        WHERE brukes for å hente ut spesifikk data:
+            WHERE alder = 18
+            WHERE epost = 'markushamre@hotmail.com
+
+            WHERE epost IS NOT NULL
+            WHERE epost IS NULL
+
+            AND & OR operatorene kan brukes i WHERE-betingelsen.
+
+        WHERE-betingelsen kan som regeles brukes når kolonnene som kobles sammen har data i begge tabeller.
+
+            WHERE ansatt.stillingskode = stillingstype.stillingskode
+
+        Hvis vi vil ha med all data fra én tabell, og data som matcher i en annen må vi bruker LEFT/RIGHT OUTER JOIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- Konseptuell modell
+    - Konseptuell modell samt entetisert konseptuell modell
+    - Tenk over hva som er register av informasjon, og hva som er koblingen mellom disse
+
+    F.eks et databasesystem for en kino:
+        tabell Kunde
+        tabell Film
+        tabell Kinosal
+        tabell Visning
+        tabell Billett
+
+        Her er tabellene Kunde, Film og Kinosal register av informasjon, mens Visning og Billett sier noe om hvordan de kobles sammen.
+
+        Kunde -> Film 
+
+        Kunde -> Film <- Kinosal
+
+        Kunde -> Billett -> Visning <- Film
+                                  ^--- Kinosal
+        
+        Film og kinosal har i utgangspunktet ikke noe direkte forhold: En film kan sees på alle kinosaler!
+        En billett har ikke noe med film eller kinosal å gjøre -> Man kjøper ikke billett til en kinosal, men til filmvisningen som forgår i kinosalen. Det kan tenkes at man kjøper billett til en film, men film-tabellen er et register over alle filmer kinoen har vist, og kan vise. Den sier IKKE noe om når de vises.
+
+
+
+
+CREATE INDEX navnIDX ON Bruker(Etternavn)
