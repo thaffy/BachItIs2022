@@ -1,0 +1,176 @@
+html, body  {height:100%;
+}
+
+body        {
+            background-color:lightyellow;
+            font-family:Verdana, sans-serif;
+}
+
+main        {
+            margin-left:3em;
+            margin-right:3em;
+            margin-bottom:6em;
+}
+
+article     {
+    padding-bottom:1em;
+}
+
+ul li       {
+            padding-bottom:0.2em;
+}
+
+
+ul li a     {
+            text-decoration: underline;
+}
+p a         {
+            text-decoration: underline;
+}
+
+a           {
+            text-decoration: none;
+            color:black;
+}
+
+h1, h2      {
+            text-align:center;
+}
+
+nav         {
+            text-align:center;
+            padding:1em;
+            border-bottom:0.1em solid black;
+            margin-left:7em;
+            margin-right:7em;
+}
+
+nav a       {
+            border-right: 0px solid black;
+            padding:0.1em;
+            margin:1em;
+}
+
+nav a:hover {
+            color:blue;
+            text-decoration:underline;
+}
+
+/* Styling Dropdown Meny */
+#navigasjonsBar {
+            position:relative;
+            margin:0;
+            padding:0;
+            height:30px;
+            width: 100%;
+}
+
+#navigasjonsBar ul {
+            margin:0;
+            padding:0;
+            position:relative;
+            height: 100%;
+            width: 100%;
+            list-style-type: none;
+            background-color:#eeeeee;
+            overflow:visible;
+}
+
+#navigasjonsBar ul > li {
+            display: block;
+            float:left;
+            height: auto;
+            width: 120px;
+}
+
+#navigasjonsBar li > a {
+            display:block;
+            padding: 0 0 0 10px;
+            height: 100%;
+            width: 109px;
+            border-right:1px solid black;
+            line-height: 30px;
+            font-family: Verdana, sans-serif;
+            font-size: 17px;
+            text-decoration: none;
+            background-color: #eeeeee;
+            color: #5d5636;
+}
+
+#navigasjonsBar ul ul {
+            margin-top:2px;
+            display: none;
+            position:static;
+            height: auto;
+            width: 160px;
+            border: 1px #666666 solid;
+            background-color: #dddddd;
+}
+#navigasjonsBar ul ul li {
+            position: relative;
+            float: none;
+            display: block;
+            height: 28px;
+            width: 100%;
+            border: none;
+}
+
+#navigasjonsBar ul ul li > a {
+            height: 100%;
+            width: 96%;
+            padding: 0 0 0 4%;
+            line-height: 20px;
+            background-color:transparent;
+            border: none;
+            color: #000000;
+            font-size: 12px;
+            font-style: normal;
+}
+#navigasjonsBar ul li:hover {
+            color:blue;
+}
+
+#navigasjonsBar li:hover > a {
+            color:#220000;
+            background-color:#eeeabe;
+}
+
+#navigasjonsBar li:hover > ul {
+            display:block;
+}
+/* End CSS Dropdown Meny */
+
+.tabell		{
+    border:1px solid black;
+    border-collapse:collapse;
+}
+.tabell td	{
+    border:1px solid black;
+    padding:0.3em;
+}
+        
+
+footer      {
+            position:fixed;
+            bottom:0; left:0; width:100%;
+            background-color:gray;color:white;text-align:center;
+            padding-top:0.5em;
+}
+
+footer a    {
+            padding:0.5em;
+            padding-top:1em;
+            text-decoration:underline;
+}
+
+footer a:hover  {
+            color:white;
+}
+
+article img {
+            float:right;
+            padding: 5px;
+}
+
+
+

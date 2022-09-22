@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+<meta charset="UTF-8">
+<title>Tabeller</title>
+<style>
+body        {background-color:lightyellow;
+            }   
+h1          {color:blue;
+            font-family:Verdana, sans-serif;
+            }
+table       {border:3px solid black;
+            border-collapse:collapse;
+            background-color:lightseagreen;
+            text-align:center;
+            }
+th, td      {border:1px solid black;
+            }
+
+</style>
+<!-- fjerner "border=1" i table tag'n, bruk CSS -->
+</head>
+
+<body>
+<h1>Grunnstruktur for tabeller</h1>
+<!-- html definerer tabeller "on a row-by-row basis", altså at vi må ha fokus på at radene er fullstendige -->
+<!-- nummerer cellen fortløpende med rad-indeks først. -->
+<table>
+    <!-- Starter med første rad og 3 celler -->
+    <tr>
+        <td>Celle 1.1</td>
+        <td>Celle 1.2</td>
+        <td>Celle 1.3</td>
+    </tr>
+    <!-- Så definerer vi neste rad med 3 celler-->
+    <tr>
+        <td>Celle 2.1</td>
+        <td>Celle 2.2</td>
+        <td>Celle 2.3</td>
+    </tr>
+    <!-- Og slik fortsetter vi rad for rad-->
+    <tr>
+        <td>Celle 3.1</td>
+        <td>Celle 3.2</td>
+        <td>Celle 3.3</td>
+    </tr>
+</table>
+<h1>Tabell med kolonneoverskrifter og radetiketter</h1>
+<!-- <th>...</th> brukes til å lage kolonneoverskrifter som legges inn som første rad -->
+<table>
+    <tr>
+        <th></th>
+        <th>Rød</th>
+        <th>Gul</th>
+        <th>Blå</th>
+    </tr>
+    <tr>
+        <th>Rød</th>
+        <td>Rød</td>
+        <td>Oransje</td>
+        <td>Lilla</td>
+    </tr>
+    <tr>
+        <th>Gul</th>
+        <td>Oransje</td>
+        <td>Gul</td>
+        <td>Grønn</td>
+    </tr>
+    <tr>
+        <th>Blå</th>
+        <td>Lilla</td>
+        <td>Grønn</td>
+        <td>Blå</td>
+    </tr>
+
+</table>
+
+</body>
+
+</html>

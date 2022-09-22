@@ -1,0 +1,16 @@
+1000
+Markus
+Hamre
+Bachelor IT og IS
+1050
+Ingrid
+Riksfjord
+Bachelor IT og IS
+2345
+Geir
+Bakke
+Bachelor Økonomi og Administrasjon
+2010
+Morten
+Ramm
+Bachelor Jus

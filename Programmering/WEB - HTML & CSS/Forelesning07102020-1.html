@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+<meta charset="UTF-8">
+<title>Styling av tekst</title>
+</head>
+
+<body>
+<h1>Eksempler på ulik styling av tekst, dvs deler av tekst i et ansnitt</h1>
+<h2>Først eksempel på bruk av semantiske HTML-tag'er, LCK s 122</h2>
+<p>I dette avsnittet har jeg formatert deler av teksten med <em> "vektleggingstag'en"</em>.</p>
+<p>I dette avsnittet har jeg formatert deler av teksten med <strong>sterk vektleggingstag'n</strong>.</p>
+
+<h2>Så noen eksempler på bruk av fysiske (HTML) style-tag'er som har overlevd til HTML5, LCK s 124</h2>
+<p>I dette avsnittet har jeg formatert deler av teksten med <b>uthev tag'en</b>.</p>
+<p>I dette avsnittet har jeg formatert deler av teksten med <i>kursiv tag'en</i>.</p>
+<p>I dette avsnittet har jeg formatert deler av teksten med <u>understrek tag'en</u>.</p>
+<p> ---> Aldri bruk disse tag'ene!</p>
+
+<h2>Formatering ved bruk av CSS, LCK s 125</h2>
+<p>Da får vi bruk for <span>span-tag'n som ikke har noen effekt på egenhånd (brukt alene)</span>, men vi kan bruke den sammen med style-attributter.</p>
+<h3>Text Decoration Property</h3>
+<p>I dette avsnittet er deler av teksten stylet med <span style="text-decoration: underline;">understreket tekst</span>.</p>
+<p>I dette avsnittet er deler av teksten stylet med <span style="text-decoration: overline;">overstreket tekst</span></p>
+<p>I dette avsnittet er deler av teksten stylet med <span style="text-decoration: line-through;">gjennomstreket tekst</span></p>
+<p>Alle tag'er som inneholder tekst kan styles på denne måten.</p>
+<!-- <h1 style="text-decoration: underline;">Dette er en understreket overskrift</h1> Selvfølgelig, ikke bruk slik overskrift struktur og underline.. -->
+<h3>Font properties</h3>
+<p>I dette avsnittet er deler av teksten stylet med <span style="font-style:italic;">kursiv tekst</span>.</p>
+<p>I dette avsnittet er deler av teksten stylet med <span style="font-weight:bold;">uthevet tekst</span>.</p>
+
+<!-- enkelt/fast linjeskift -->
+<br>
+<p>Dette er et nytt avsnitt etter et linjeskift. Etter et avsnitt fungerer linjeskift som en "tom linje". Dette er feil bruk av linjeskift ifølge html-standarden, en kan bruke tag'n innen et avsnitt men ikke mellom avsnitt.</p>
+<p>Det riktige er altså å bruke linjeskift<br>i et avsnitt.<br>Det fungerer da som fast linjeskift.<br>Det kan da være greit å "brekke" teksten i teksteditoren når en bruker tag for linjeskift, jfr forelesning 1.</p>
+
+<h1>Preformatert tekst</h1>
+<!-- Kan brukes til enkle tabelariske oppstillinger, vi skal ha om tabeller senere -->
+<!-- ikke bruk tabulator i <pre>-tag, og hold linjene kortere enn 60 tegn -->
+<pre>
+-----------------------------------
+   overskr1   overskr2   overskr3
+-----------------------------------
+     100       200         300
+     500       400         300
+     300       600         900
+-----------------------------------
+</pre>
+
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;DemoInterface/src/(default package)&apos;&#x0A;- Original project: &apos;DemoAbstraktKlasse&apos;&#x0A;- Destination element: &apos;DemoInterface/src/(default package)&apos;&#x0A;- Original elements:&#x0A;     Sirkel.java&#x0A;     Kvadrat.java&#x0A;     Trekant.java" description="Copy compilation units" destination="=DemoInterface/src&lt;" element1="/src&lt;{Sirkel.java" element2="/src&lt;{Kvadrat.java" element3="/src&lt;{Trekant.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1631868220242" units="3" version="1.0"/>
+</session>

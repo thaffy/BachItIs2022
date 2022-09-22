@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+<meta charset="UTF-8">
+<title>Hovedmeny</title>
+<style>
+/* Style for Page Layout - sideoppsettet */
+body                {margin:0;padding:0;
+                    background-color:lightyellow;}
+header              {background-color:black; color:white;
+                    }
+#navigasjonsbar ul  {padding:0; margin:0;
+                    display:inline;}
+#navigasjonsbar li  {display:inline; padding-left:1em;
+                    margin-left:1em;
+                    border-left:1px solid black;
+                    }
+/* Style for farger, fonter og formatering */
+
+body                {font-family:Verdana, sans-serif;
+                    }
+header              {text-align:center;
+                    }
+#navigasjonsbar li a:hover
+                    {color:#00FF00;
+                    }
+footer              {position:absolute;
+                    bottom:0; left:0; width:100%;
+                    background-color:green; color:white; text-align:center;}
+
+
+</style>
+</head>
+
+<body>
+<header>
+<h1>Hva vi har gjennomgått så langt</h1>
+</header>
+
+<!-- tips: lage menystrukturen/lista først og legge på lenke etterpå -->
+<nav id="navigasjonsbar">
+<ul>
+    <li><a href="Forelesning09102020-Hypertekst/Forste web 2020.html">Min første web-side</a></li>
+    <li><a href="Forelesning09102020-Hypertekst/Styling tekst 2020.html">Styling av tekst</a></li>
+    <li><a href="Forelesning09102020-Hypertekst/Lister2020.html">Lister</a></li>
+        <!-- nå starter vi med å se på menynivå 1 i lista, "kommenterer" ut det som skal bli undermeny
+        <ul>
+            <li><a href="Forelesning09102020-Hypertekst/Lister stylet egenarbeid 2020.html">Stylet, eget arbeid</a></li>
+            <li><a href="Forelesning09102020-Hypertekst/Lister med bokmerke 2020.html">Med bokmerker</a></li>
+            <li><a href="Forelesning09102020-Hypertekst/stikkordslister 2020.html">Stikkordslister</a></li>
+        </ul>
+        -->
+    <li><a href="Forelesning09102020-Hypertekst/bilde og ekstern lenke 2020.html">Bilder og eksterne lenker</a></li>
+</ul>
+</nav>
+
+<main>
+<!-- Her kommer det unike innholdet på siden, NB! <main> er ikke en semantisk strukturtag -->
+<article>
+<p>Her kommer en del av det unike innholdet på siden.</p>
+</article>
+
+<article>
+<p>Her kommer en annen del av det unike innholdet på siden.</p>
+</article>
+</main>
+
+<footer>
+<p>Copyright 20-21, Markus Hamre. Spørsmål: <a href="mailto:markushamre@hotmail.com">send e-post til Markus</a></p>
+</footer>
+
+</body>
+
+</html>

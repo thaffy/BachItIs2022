@@ -1,0 +1,22 @@
+import javax.swing.JOptionPane;
+public class Divisjon {
+
+
+	public static void main(String[] args) {
+		String lestTall = JOptionPane.showInputDialog("Skriv et tall: ");
+		int tall1 = Integer.parseInt(lestTall);
+		lestTall = JOptionPane.showInputDialog("Skriv et tall til: ");
+		int tall2 = Integer.parseInt(lestTall);
+		// Foretar en heltallsdivisjon:
+		int svar = tall1/tall2;
+		// Presenterer svaret:
+		JOptionPane.showMessageDialog(null, "Svaret er " + svar);
+		// "Vanlig" divisjon:
+		double svar2 = (double)tall1/tall2;
+		JOptionPane.showMessageDialog(null, "Svaret er " + svar2);
+		
+		
+
+	}
+
+}

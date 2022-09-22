@@ -1,0 +1,70 @@
+230230
+Markus
+Hamre
+markushamre@hotmail.com
+12.09.1995
+Mann
+Bach IT og IS
+240240
+Iris Katrine
+Hamre
+iriskat@hotmail.com
+12.03.1999
+Kvinne
+Bach IT og IS
+250250
+Terje
+Hansen
+terjehansen@gmail.com
+05.06.1993
+Mann
+Bach økadm
+260260
+Lone
+Bergseth
+lone@bergseth.no
+12.12.1994
+Kvinne
+Bach økadm
+270280
+Geir
+Bakke
+geirbakke@lillestrom.no
+01.02.1983
+Mann
+Bach IT og IS
+280280
+Mads
+Hansen
+madshansen@gmail.com
+06.06.1990
+Mann
+Bach IT og IS
+290290
+Leah
+Thomassen
+leahthomassen@gmail.com
+02.02.1995
+Kvinne
+Bach økadm
+310310
+Ingrid
+Thomassen
+ingridthomassen@gmail.com
+02.02.1995
+Kvinne
+Bach IT og IS
+320320
+Lars
+Almar
+larsalmar@gmail.com
+03.04.1994
+Mann
+Bach økadm
+330330
+Rolf
+Kongsberg
+rolfkonge@hotmail.com
+06.07.1990
+Mann
+Bach IT og IS

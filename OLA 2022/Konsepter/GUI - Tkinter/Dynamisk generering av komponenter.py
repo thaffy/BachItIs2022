@@ -1,5 +1,6 @@
 from tkinter import *
 
+
 def main():
     hovedvindu = Tk()
     hovedvindu.title("Forloops")

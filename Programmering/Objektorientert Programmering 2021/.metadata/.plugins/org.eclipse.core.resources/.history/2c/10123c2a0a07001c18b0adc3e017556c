@@ -1,0 +1,11 @@
+
+public class Divisjon {
+	import static javax.swing.JOptionPane;
+
+	public static void main(String[] args) {
+		String lestTall = showInputDialog("Skriv et tall: ")
+		
+
+	}
+
+}

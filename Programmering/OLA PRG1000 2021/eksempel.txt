@@ -1,0 +1,12 @@
+FørsteLinje - Rød
+AndreLinje - Grønn
+1
+FjerdeLinje - Gul
+FemteLinje - Rød
+1
+SjuendeLinje - Blå
+ÅttendeLinje - Gul
+1
+TiendeLinje - Grønn
+EllevteLinje - Blå
+1

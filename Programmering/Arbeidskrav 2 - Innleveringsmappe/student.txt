@@ -1,0 +1,72 @@
+1000
+Markus
+Hamre
+Bachelor IT og IS
+1050
+Ingrid
+Riksfjord
+Bachelor IT og IS
+2010
+Morten
+Ramm
+Bachelor Jus
+6666
+Lars
+Larsen
+Bachelor Jus
+1234
+Inger
+Ingebrigtsen
+Bachelor IT og IS
+4321
+Bjarne
+Bjønbo
+Bachelor Jus
+1337
+Kiwi
+Bob
+Bachelor IT og IS
+2456
+Mads
+Hansen
+Bachelor i Jus
+1969
+Torgeir
+Torgeirson
+Bachelor Jus
+1970
+Markus
+Andreasen
+Bachelor Jus
+1985
+Iris
+Hamre
+Bachelor Jus
+6543
+Karl
+Wikåshaugen
+Bachelor Økonomi og Administrasjon
+2012
+Sander
+Syvertsen
+Bachelor Jus
+7676
+Pirra
+Ditche
+Bachelor Økonomi og Administrasjon
+6453
+Marius
+Moe
+Bachelor IT og IS
+6767
+Unger
+Deustchmann
+Bachelor Jus
+1035
+Sarah
+Silmarilion
+Bachelor Markedsføring
+
+
+
+

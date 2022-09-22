@@ -1,0 +1,13 @@
+INF1000R
+Informasjonssystemer
+PRG1000R
+Grunnleggende Programmering 1
+WEB1100R
+Web og HCI
+SYS1000R
+Systemutvikling
+MRK1000R
+Markedsføring
+ETI1000R
+Etikk og filosofi
+
