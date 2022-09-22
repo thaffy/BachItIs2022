@@ -11,7 +11,8 @@ from sklearn.tree import DecisionTreeClassifier
 
 
 # Load files
-input_file = 'AI3000/data_multivar_nb.txt'
+# input_file = 'data_multivar_nb.txt' 
+input_file = 'AI3000\Forelesninger\data_multivar_nb.txt'  ## <-- Relative path
 data = np.loadtxt(input_file, delimiter= ',')
 
 x,y = data[:,:-1], data[:,-1]
