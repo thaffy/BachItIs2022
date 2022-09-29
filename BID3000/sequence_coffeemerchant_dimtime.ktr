@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>sequence 19092022</name>
+    <name>sequence_coffeemerchant_dimtime</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -427,20 +427,20 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2022/09/19 14:36:32.204</created_date>
+    <created_date>2022/09/26 12:30:44.376</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2022/09/19 14:36:32.204</modified_date>
-    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <modified_date>2022/09/26 12:30:44.376</modified_date>
+    <key_for_session_key/>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
   </notepads>
   <connection>
-    <name>MySQL Connect</name>
+    <name>MySQLConnect</name>
     <server>localhost</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>coffeemerchant_dw</database>
+    <database>coffeemerchant_Spoon_dw2</database>
     <port>3306</port>
     <username>root</username>
     <password>Encrypted 2be98afc86aa7f288a415ba75d697a3dc</password>
@@ -500,12 +500,12 @@
   </connection>
   <order>
     <hop>
-      <from>Generate rows dim_time</from>
-      <to>Add sequence dim time</to>
+      <from>Generate rows</from>
+      <to>Sequence</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Add sequence dim time</from>
+      <from>Sequence</from>
       <to>Calculator</to>
       <enabled>Y</enabled>
     </hop>
@@ -516,143 +516,7 @@
     </hop>
   </order>
   <step>
-    <name>Add sequence dim time</name>
-    <type>Sequence</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <valuename>SeqDay</valuename>
-    <use_database>N</use_database>
-    <connection/>
-    <schema/>
-    <seqname>SEQ_</seqname>
-    <use_counter>Y</use_counter>
-    <counter_name/>
-    <start_at>0</start_at>
-    <increment_by>1</increment_by>
-    <max_value>999999999</max_value>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>480</xloc>
-      <yloc>304</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Calculator</name>
-    <type>Calculator</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <failIfNoFile>Y</failIfNoFile>
-    <calculation>
-      <field_name>dato</field_name>
-      <calc_type>ADD_DAYS</calc_type>
-      <field_a>startDate</field_a>
-      <field_b>SeqDay</field_b>
-      <field_c/>
-      <value_type>Date</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask/>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <calculation>
-      <field_name>maanedsnavn</field_name>
-      <calc_type>COPY_FIELD</calc_type>
-      <field_a>dato</field_a>
-      <field_b/>
-      <field_c/>
-      <value_type>String</value_type>
-      <value_length>10</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask>MM-dd-yyyy</conversion_mask>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <calculation>
-      <field_name>maaned</field_name>
-      <calc_type>MONTH_OF_DATE</calc_type>
-      <field_a>dato</field_a>
-      <field_b/>
-      <field_c/>
-      <value_type>Integer</value_type>
-      <value_length>2</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask/>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <calculation>
-      <field_name>kvartal</field_name>
-      <calc_type>QUARTER_OF_DATE</calc_type>
-      <field_a>dato</field_a>
-      <field_b/>
-      <field_c/>
-      <value_type>Integer</value_type>
-      <value_length>1</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask/>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <calculation>
-      <field_name>aar</field_name>
-      <calc_type>YEAR_OF_DATE</calc_type>
-      <field_a>dato</field_a>
-      <field_b/>
-      <field_c/>
-      <value_type>Integer</value_type>
-      <value_length>4</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask/>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>656</xloc>
-      <yloc>304</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Generate rows dim_time</name>
+    <name>Generate rows</name>
     <type>RowGenerator</type>
     <description/>
     <distribute>Y</distribute>
@@ -664,7 +528,7 @@
     </partitioning>
     <fields>
       <field>
-        <name>startDate</name>
+        <name>StartDate</name>
         <type>Date</type>
         <format>yyyy-MM-dd</format>
         <currency/>
@@ -690,8 +554,144 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>256</xloc>
-      <yloc>304</yloc>
+      <xloc>240</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sequence</name>
+    <type>Sequence</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <valuename>SeqDay</valuename>
+    <use_database>N</use_database>
+    <connection>MySQLConnect</connection>
+    <schema/>
+    <seqname>SEQ_</seqname>
+    <use_counter>Y</use_counter>
+    <counter_name/>
+    <start_at>0</start_at>
+    <increment_by>1</increment_by>
+    <max_value>999999999</max_value>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>400</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Calculator</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <failIfNoFile>Y</failIfNoFile>
+    <calculation>
+      <field_name>dato</field_name>
+      <calc_type>ADD_DAYS</calc_type>
+      <field_a>StartDate</field_a>
+      <field_b>SeqDay</field_b>
+      <field_c/>
+      <value_type>Date</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <remove>N</remove>
+      <conversion_mask/>
+      <decimal_symbol/>
+      <grouping_symbol/>
+      <currency_symbol/>
+    </calculation>
+    <calculation>
+      <field_name>monthname</field_name>
+      <calc_type>COPY_FIELD</calc_type>
+      <field_a>dato</field_a>
+      <field_b/>
+      <field_c/>
+      <value_type>String</value_type>
+      <value_length>9</value_length>
+      <value_precision>-1</value_precision>
+      <remove>N</remove>
+      <conversion_mask>MMMM</conversion_mask>
+      <decimal_symbol/>
+      <grouping_symbol/>
+      <currency_symbol/>
+    </calculation>
+    <calculation>
+      <field_name>monthno</field_name>
+      <calc_type>MONTH_OF_DATE</calc_type>
+      <field_a>dato</field_a>
+      <field_b/>
+      <field_c/>
+      <value_type>Integer</value_type>
+      <value_length>2</value_length>
+      <value_precision>-1</value_precision>
+      <remove>N</remove>
+      <conversion_mask/>
+      <decimal_symbol/>
+      <grouping_symbol/>
+      <currency_symbol/>
+    </calculation>
+    <calculation>
+      <field_name>quarter</field_name>
+      <calc_type>QUARTER_OF_DATE</calc_type>
+      <field_a>dato</field_a>
+      <field_b/>
+      <field_c/>
+      <value_type>Integer</value_type>
+      <value_length>1</value_length>
+      <value_precision>-1</value_precision>
+      <remove>N</remove>
+      <conversion_mask/>
+      <decimal_symbol/>
+      <grouping_symbol/>
+      <currency_symbol/>
+    </calculation>
+    <calculation>
+      <field_name>year</field_name>
+      <calc_type>YEAR_OF_DATE</calc_type>
+      <field_a>dato</field_a>
+      <field_b/>
+      <field_c/>
+      <value_type>Integer</value_type>
+      <value_length>4</value_length>
+      <value_precision>-1</value_precision>
+      <remove>N</remove>
+      <conversion_mask/>
+      <decimal_symbol/>
+      <grouping_symbol/>
+      <currency_symbol/>
+    </calculation>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>560</xloc>
+      <yloc>352</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -706,14 +706,14 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>MySQL Connect</connection>
-    <schema/>
-    <table/>
+    <connection>MySQLConnect</connection>
+    <schema>coffeemerchant_Spoon_dw2</schema>
+    <table>dim_time</table>
     <commit>1000</commit>
-    <truncate>N</truncate>
+    <truncate>Y</truncate>
     <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>N</specify_fields>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
     <partitioning_enabled>N</partitioning_enabled>
     <partitioning_field/>
     <partitioning_daily>N</partitioning_daily>
@@ -721,9 +721,29 @@
     <tablename_in_field>N</tablename_in_field>
     <tablename_field/>
     <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
+    <return_keys>Y</return_keys>
+    <return_field>date_sk</return_field>
     <fields>
+      <field>
+        <column_name>dato</column_name>
+        <stream_name>dato</stream_name>
+      </field>
+      <field>
+        <column_name>monthname</column_name>
+        <stream_name>monthname</stream_name>
+      </field>
+      <field>
+        <column_name>monthno</column_name>
+        <stream_name>monthno</stream_name>
+      </field>
+      <field>
+        <column_name>quarter</column_name>
+        <stream_name>quarter</stream_name>
+      </field>
+      <field>
+        <column_name>year</column_name>
+        <stream_name>year</stream_name>
+      </field>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -734,8 +754,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>848</xloc>
-      <yloc>304</yloc>
+      <xloc>736</xloc>
+      <yloc>352</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

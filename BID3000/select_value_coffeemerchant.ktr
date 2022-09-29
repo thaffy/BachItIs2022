@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>sequence 19092022</name>
+    <name>select_value_coffeemerchant</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -427,20 +427,83 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2022/09/19 14:36:32.204</created_date>
+    <created_date>2022/09/26 13:40:54.206</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2022/09/19 14:36:32.204</modified_date>
+    <modified_date>2022/09/26 13:40:54.206</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
   </notepads>
   <connection>
-    <name>MySQL Connect</name>
+    <name>MySQLConnect</name>
     <server>localhost</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>coffeemerchant_dw</database>
+    <database>coffeemerchant_spoon_dw2</database>
+    <port>3306</port>
+    <username>root</username>
+    <password>Encrypted 2be98afc86aa7f288a415ba75d697a3dc</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>EXTRA_OPTION_MYSQL.defaultFetchSize</code>
+        <attribute>500</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MYSQL.useCursorFetch</code>
+        <attribute>true</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>3306</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>STREAM_RESULTS</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>MySQLConnect_Output</name>
+    <server>localhost</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>coffeemerchant_spoon_dw2</database>
     <port>3306</port>
     <username>root</username>
     <password>Encrypted 2be98afc86aa7f288a415ba75d697a3dc</password>
@@ -500,160 +563,29 @@
   </connection>
   <order>
     <hop>
-      <from>Generate rows dim_time</from>
-      <to>Add sequence dim time</to>
+      <from>Table input</from>
+      <to>Select values</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Table input</from>
+      <to>Select values</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Table input</from>
+      <to>Select values</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Add sequence dim time</from>
-      <to>Calculator</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Calculator</from>
+      <from>Select values</from>
       <to>Table output</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Add sequence dim time</name>
-    <type>Sequence</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <valuename>SeqDay</valuename>
-    <use_database>N</use_database>
-    <connection/>
-    <schema/>
-    <seqname>SEQ_</seqname>
-    <use_counter>Y</use_counter>
-    <counter_name/>
-    <start_at>0</start_at>
-    <increment_by>1</increment_by>
-    <max_value>999999999</max_value>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>480</xloc>
-      <yloc>304</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Calculator</name>
-    <type>Calculator</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <failIfNoFile>Y</failIfNoFile>
-    <calculation>
-      <field_name>dato</field_name>
-      <calc_type>ADD_DAYS</calc_type>
-      <field_a>startDate</field_a>
-      <field_b>SeqDay</field_b>
-      <field_c/>
-      <value_type>Date</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask/>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <calculation>
-      <field_name>maanedsnavn</field_name>
-      <calc_type>COPY_FIELD</calc_type>
-      <field_a>dato</field_a>
-      <field_b/>
-      <field_c/>
-      <value_type>String</value_type>
-      <value_length>10</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask>MM-dd-yyyy</conversion_mask>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <calculation>
-      <field_name>maaned</field_name>
-      <calc_type>MONTH_OF_DATE</calc_type>
-      <field_a>dato</field_a>
-      <field_b/>
-      <field_c/>
-      <value_type>Integer</value_type>
-      <value_length>2</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask/>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <calculation>
-      <field_name>kvartal</field_name>
-      <calc_type>QUARTER_OF_DATE</calc_type>
-      <field_a>dato</field_a>
-      <field_b/>
-      <field_c/>
-      <value_type>Integer</value_type>
-      <value_length>1</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask/>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <calculation>
-      <field_name>aar</field_name>
-      <calc_type>YEAR_OF_DATE</calc_type>
-      <field_a>dato</field_a>
-      <field_b/>
-      <field_c/>
-      <value_type>Integer</value_type>
-      <value_length>4</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask/>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>656</xloc>
-      <yloc>304</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Generate rows dim_time</name>
-    <type>RowGenerator</type>
+    <name>Select values</name>
+    <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -664,23 +596,35 @@
     </partitioning>
     <fields>
       <field>
-        <name>startDate</name>
-        <type>Date</type>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif>2005-01-01</nullif>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
+        <name>ConsumerID</name>
+        <rename>customer_ID</rename>
       </field>
+      <field>
+        <name>FirstName</name>
+        <rename/>
+      </field>
+      <field>
+        <name>LastName</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Street</name>
+        <rename/>
+      </field>
+      <field>
+        <name>City</name>
+        <rename/>
+      </field>
+      <field>
+        <name>State</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Zipcode</name>
+        <rename/>
+      </field>
+      <select_unspecified>N</select_unspecified>
     </fields>
-    <limit>3660</limit>
-    <never_ending>N</never_ending>
-    <interval_in_ms>5000</interval_in_ms>
-    <row_time_field>now</row_time_field>
-    <last_time_field>FiveSecondsAgo</last_time_field>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -690,8 +634,285 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>256</xloc>
-      <yloc>304</yloc>
+      <xloc>352</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Table input</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>MySQLConnect</connection>
+    <sql>SELECT
+  ConsumerID
+, FirstName
+, LastName
+, Street
+, City
+, State
+, Zipcode
+, Phone
+, Fax
+, CreditLimit
+FROM coffeemerchant.consumers
+</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>ConsumerID</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>Table input</origin>
+        <comments>ConsumerID</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Europe/Berlin</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>FirstName</name>
+        <length>30</length>
+        <precision>-1</precision>
+        <origin>Table input</origin>
+        <comments>FirstName</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Europe/Berlin</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>LastName</name>
+        <length>30</length>
+        <precision>-1</precision>
+        <origin>Table input</origin>
+        <comments>LastName</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Europe/Berlin</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>Street</name>
+        <length>50</length>
+        <precision>-1</precision>
+        <origin>Table input</origin>
+        <comments>Street</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Europe/Berlin</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>City</name>
+        <length>50</length>
+        <precision>-1</precision>
+        <origin>Table input</origin>
+        <comments>City</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Europe/Berlin</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>State</name>
+        <length>2</length>
+        <precision>-1</precision>
+        <origin>Table input</origin>
+        <comments>State</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Europe/Berlin</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>Zipcode</name>
+        <length>5</length>
+        <precision>-1</precision>
+        <origin>Table input</origin>
+        <comments>Zipcode</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Europe/Berlin</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>Phone</name>
+        <length>20</length>
+        <precision>-1</precision>
+        <origin>Table input</origin>
+        <comments>Phone</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Europe/Berlin</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>Fax</name>
+        <length>20</length>
+        <precision>-1</precision>
+        <origin>Table input</origin>
+        <comments>Fax</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Europe/Berlin</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>CreditLimit</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>Table input</origin>
+        <comments>CreditLimit</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Europe/Berlin</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>176</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -706,14 +927,14 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>MySQL Connect</connection>
-    <schema/>
-    <table/>
+    <connection>MySQLConnect_Output</connection>
+    <schema>coffeemerchant_spoon_dw2</schema>
+    <table>dim_customer</table>
     <commit>1000</commit>
-    <truncate>N</truncate>
+    <truncate>Y</truncate>
     <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>N</specify_fields>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
     <partitioning_enabled>N</partitioning_enabled>
     <partitioning_field/>
     <partitioning_daily>N</partitioning_daily>
@@ -721,9 +942,37 @@
     <tablename_in_field>N</tablename_in_field>
     <tablename_field/>
     <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
+    <return_keys>Y</return_keys>
+    <return_field>customer_sk</return_field>
     <fields>
+      <field>
+        <column_name>customer_ID</column_name>
+        <stream_name>customer_ID</stream_name>
+      </field>
+      <field>
+        <column_name>FirstName</column_name>
+        <stream_name>FirstName</stream_name>
+      </field>
+      <field>
+        <column_name>LastName</column_name>
+        <stream_name>LastName</stream_name>
+      </field>
+      <field>
+        <column_name>Street</column_name>
+        <stream_name>Street</stream_name>
+      </field>
+      <field>
+        <column_name>City</column_name>
+        <stream_name>City</stream_name>
+      </field>
+      <field>
+        <column_name>State</column_name>
+        <stream_name>State</stream_name>
+      </field>
+      <field>
+        <column_name>Zipcode</column_name>
+        <stream_name>Zipcode</stream_name>
+      </field>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -734,8 +983,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>848</xloc>
-      <yloc>304</yloc>
+      <xloc>528</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
