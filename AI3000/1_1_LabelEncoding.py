@@ -21,3 +21,11 @@ decoded_list = encoder.inverse_transform(encoded_values)
 print("\nEncoded values=",encoded_values)
 print("Decoded values =",decoded_list)
 
+
+
+
+
+
+
+
+
