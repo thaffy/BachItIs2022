@@ -39,7 +39,7 @@ NTILE(4) OVER (ORDER BY SUM(quantity) DESC) AS SUNTILERank,
 ROW_NUMBER() OVER (ORDER BY SUM(quantity) DESC) AS SURowNumRank
 FROM dim_customers c, fact_stage_order f
 WHERE c.customer_sk = f.consumer_sk
-GROUP BY zipcode
+GROUP BY zipcode;
 
 
 SELECT name,year,COUNT(*) AS rowcount,
