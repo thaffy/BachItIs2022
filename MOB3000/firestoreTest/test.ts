@@ -19,12 +19,15 @@ const testAddData = async () => {
     await docRef.set({
         listID: 1,
         listName : "List 1",
+        description : "We need a lot of Stuff here, and bunch of cucumbers also!",
         createdBy : {
             userID : userID,
             userName : "Terje Fjern"
         },
         isActive: true,
+        isPublic: false,
         isRepeating: true,
+        created : new Date().toDateString(),
         lastUpdated : new Date().toDateString(),
         items: [
             {
